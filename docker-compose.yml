@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  redis:
+    image: redis
+    networks:
+    - blockchain_network
+
+  blockchain:
+    image: blockchain
+    build: ./Blockchain
+    networks:
+    - blockchain_network
+    depends_on:
+    - redis
+    env_file:
+    - app.env
+    deploy:
+      replicas: 3
+
+networks:
+    blockchain_network:
