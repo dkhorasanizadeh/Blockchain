@@ -1,11 +1,12 @@
-from calendar import c
-from blockchain import Blockchain
-import time
-import threading
-import redis
-import random
+#pylint: disable=import-error, missing-module-docstring, missing-function-docstring, missing-class-docstring
 import os
+import random
+import threading
+import time
 
+import redis
+
+from blockchain import Blockchain
 
 blockchain = Blockchain()
 pubsub = redis.StrictRedis(os.getenv('REDIS_URL') or 'localhost', os.getenv('REDIS_PORT') or 6379)

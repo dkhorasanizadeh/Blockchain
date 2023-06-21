@@ -1,6 +1,8 @@
-from block import Block
-from threading import Lock
+#pylint: disable=import-error, missing-module-docstring, missing-function-docstring, missing-class-docstring
 import pickle
+from threading import Lock
+
+from block import Block
 
 
 class Blockchain:

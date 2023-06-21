@@ -1,7 +1,8 @@
-from hashlib import sha256
+#pylint: disable=import-error, missing-module-docstring, missing-function-docstring, missing-class-docstring
 import json
-import time
 import os
+import time
+from hashlib import sha256
 
 STARTING_RATE = int(os.getenv("STARTING_RATE")) or 10
 INCREASE_COEFFICIENT = int(os.getenv("INCREASE_COEFFICIENT")) or 10
