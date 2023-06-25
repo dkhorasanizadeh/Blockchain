@@ -21,7 +21,6 @@ class Block:
         self.hash = self.compute_hash()
 
     def compute_hash(self):
-        block_data = json.dumps(self.__dict__, sort_keys=True)
         block_data = (
             str(self.timestamp)
             + str(self.previous_block_hash)
